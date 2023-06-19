@@ -1,7 +1,7 @@
 {
   "name": "electron-google-analytics4",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --config config/webpack.dev.js",
