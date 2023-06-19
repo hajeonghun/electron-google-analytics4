@@ -1,10 +1,8 @@
 import {describe, expect, test} from '@jest/globals';
-import sum from '../src/index';
-import axios from 'axios';
 import Analytics from "../src/index";
 
-describe('sum module', () => {
-    test('adds 1 + 2 to equal 3', async () => {
+describe('module', () => {
+    test('analytics', async () => {
         const analytics = new Analytics('G-MFB9FKCXVY','Rx4CgrGJRP-t936bqifyNw','1080');
         analytics.set('serviceCode','jung')
         analytics.set('app_name','kakaka')
