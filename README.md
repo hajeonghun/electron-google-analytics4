@@ -7,7 +7,7 @@
 - Event
 
 ### Github Page - Docs
-https://vacu.github.io/electron-google-analytics/
+https://github.com/hajeonghun/electron-google-analytics4
 
 ### Getting started
 Installation
