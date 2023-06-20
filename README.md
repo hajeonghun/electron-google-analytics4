@@ -26,7 +26,7 @@ yarn add electron-google-analytics4
   ```
   **Usage**  
   To use the Analytics module, create a new instance of the Analytics class by providing the required parameters: `trackingID` and `secretKey`.  
-  The `clientID` and `sessionID` parameters are optional and can be omitted if not needed. 
+  The `clientID` and `sessionID` parameters are optional and can be omitted if not needed.   
   `clientID default: ` machineId  
   `sessionID default: ` uuidv4  
 <br/>
