@@ -1,9 +1,16 @@
 {
   "name": "electron-google-analytics4",
+  "description": "Electron GA4",
   "version": "1.0.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "files": ["lib"],
   "license": "MIT",
+  "author": "Ha Jeong Hun <hajh1994@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hajeonghun/electron-google-analytics4.git"
+  },
   "scripts": {
     "build": "tsc",
     "test": "jest"
