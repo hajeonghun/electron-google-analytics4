@@ -25,10 +25,10 @@ yarn add electron-google-analytics4
   const analytics = new Analytics('G-XXXXXX', 'xxxxx-xxxxx');
   ```
   **Usage**  
-  To use the Analytics module, create a new instance of the Analytics class by providing the required parameters: `trackingID` and `secretKey`.  
+  To use the Analytics module, create a new instance of the Analytics class by providing the required parameters: `trackingID` and `secretKey`. ([secretKey Issuance Guide](https://www.monsterinsights.com/docs/how-to-create-your-measurement-protocol-api-secret-in-ga4/))  
   The `clientID` and `sessionID` parameters are optional and can be omitted if not needed.   
-  `clientID default: ` machineId  
-  `sessionID default: ` uuidv4  
+  `clientID default: ` machineId (node-machine-id)  
+  `sessionID default: ` uuidv4 (uuid v4)  
 <br/>
 
 * Set parameter (custom params)
