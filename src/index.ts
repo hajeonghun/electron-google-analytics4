@@ -1,9 +1,8 @@
-
 import {v4 as uuidv4} from 'uuid';
 import axios from 'axios';
 import {machineIdSync} from 'node-machine-id';
 
-class Analytics {
+class Analytics4 {
     private trackingID: string;
     private secretKey: string;
     private clientID: string;
@@ -65,4 +64,4 @@ class Analytics {
 
 }
 
-export default Analytics;
+export default Analytics4;
