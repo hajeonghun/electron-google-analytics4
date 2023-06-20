@@ -1,7 +1,7 @@
 {
   "name": "electron-google-analytics4",
   "description": "Electron GA4",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": ["lib"],
@@ -11,6 +11,14 @@
     "type": "git",
     "url": "git+https://github.com/hajeonghun/electron-google-analytics4.git"
   },
+  "keywords": [
+    "google",
+    "analytics",
+    "google analytics",
+    "ga4",
+    "electron",
+    "electron ga4"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "jest"
