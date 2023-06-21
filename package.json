@@ -1,7 +1,7 @@
 {
   "name": "electron-google-analytics4",
   "description": "Electron GA4",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": ["lib"],
