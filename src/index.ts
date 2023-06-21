@@ -21,7 +21,6 @@ class Analytics4 {
     }
 
     set(key: string, value: any) {
-        console.log({key, value})
         if (value !== null) {
             this.customParams[key] = value;
         } else {
