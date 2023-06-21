@@ -1,4 +1,4 @@
-### Google Analytics 4 - [Measurement Protocol API](https://developers.google.com/analytics/devguides/collection/protocol/ga4?hl=ko)
+### Google Analytics 4 - [Measurement Protocol API](https://developers.google.com/analytics/devguides/collection/protocol/ga4?hl=en)
 
 - Supports event tracking for GA4 in [Electron](http://electron.atom.io/) built apps.
 - **Currently, it supports the event sending function.**  
