@@ -31,17 +31,31 @@ yarn add electron-google-analytics4
   `sessionID default: ` uuidv4 (uuid v4)  
 <br/>
 
-* Set parameter (custom params)
+* Set Single parameter (custom params)
 
   `Analytics#set(key, value)`
     ```javascript
     analytics.set('user', 'jeonghun');
     ```
 
-* Remove parameter (custom params)
+* Remove Single parameter (custom params)
 
     ```javascript
     analytics.set('user', null);
+    ```
+
+* Set Multiple parameter (custom params)
+
+  `Analytics#setParams(obj)`
+    ```javascript
+    const params = {name: 'hun', age: 28};
+    analytics.setParams(params);
+    ```
+  
+* Initialization parameter (custom params)
+
+    ```javascript
+    analytics.setParams(); // customParams: {}
     ```
 
 * Set User Properties

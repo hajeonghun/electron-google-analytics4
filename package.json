@@ -13,9 +13,6 @@
     "type": "git",
     "url": "git+https://github.com/hajeonghun/electron-google-analytics4.git"
   },
-  "publishConfig": {
-    "registry": "https://www.npmjs.com/package/electron-google-analytics4"
-  },
   "keywords": [
     "google",
     "analytics",
