@@ -9,6 +9,7 @@ declare class Analytics4 {
     private collectURL;
     constructor(trackingID: string, secretKey: string, clientID?: string, sessionID?: string);
     set(key: string, value: any): void;
+    setParams(params?: Record<string, unknown>): void;
     setUserProperties(upValue?: Record<string, unknown>): void;
     event(eventName: string): Promise<any>;
 }
