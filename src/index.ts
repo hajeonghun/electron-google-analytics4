@@ -28,6 +28,14 @@ class Analytics4 {
         }
     }
 
+    setParams(params?: Record<string, unknown>) {
+        if (typeof params === 'object' && Object.keys(params).length > 0) {
+            Object.assign(this.customParams, params)
+        } else {
+            this.customParams = {};
+        }
+    }
+
     setUserProperties(upValue?: Record<string, unknown>) {
         if (typeof upValue === 'object' && Object.keys(upValue).length > 0) {
             this.userProperties = upValue;
