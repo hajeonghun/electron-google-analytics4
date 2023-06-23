@@ -1,15 +1,20 @@
 {
   "name": "electron-google-analytics4",
   "description": "Electron GA4",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "license": "MIT",
   "author": "Ha Jeong Hun <hajh1994@gmail.com>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hajeonghun/electron-google-analytics4.git"
+  },
+  "publishConfig": {
+    "registry": "https://www.npmjs.com/package/electron-google-analytics4"
   },
   "keywords": [
     "google",
