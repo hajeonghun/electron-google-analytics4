@@ -87,7 +87,7 @@ yarn add electron-google-analytics4
 ```typescript
 analytics.set('name', 'jeonghun').set('age', 28);
 // or
-analytics.set('name', 'jeonghun').send('page_view');
+analytics.set('name', 'jeonghun').event('page_view');
 ```
 
 ### Verification Steps
