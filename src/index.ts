@@ -26,6 +26,8 @@ class Analytics4 {
         } else {
             delete this.customParams[key];
         }
+
+        return this;
     }
 
     setParams(params?: Record<string, unknown>) {
@@ -34,6 +36,8 @@ class Analytics4 {
         } else {
             this.customParams = {};
         }
+
+        return this;
     }
 
     setUserProperties(upValue?: Record<string, unknown>) {
@@ -42,6 +46,8 @@ class Analytics4 {
         } else {
             this.userProperties = null;
         }
+
+        return this;
     }
 
     event(eventName: string): Promise<any> {

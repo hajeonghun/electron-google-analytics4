@@ -42,4 +42,14 @@ describe('Analytics', () => {
         expect(configData.events[0].params).toHaveProperty('test3');
         expect(configData.events[0].params).toHaveProperty('test4');
     });
+
+    test('method chaining', async () => {
+        const analytics = new Analytics(trackingID,secretKey);
+
+        const response = await analytics.set('test1', 1).set('test2', 2).event('page_view');
+        const configData = JSON.parse(response?.config?.data);
+
+        expect(configData.events[0].params).toHaveProperty('test1');
+        expect(configData.events[0].params).toHaveProperty('test2');
+    });
 });
