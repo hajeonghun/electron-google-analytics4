@@ -3,11 +3,14 @@
 - Supports event tracking for GA4 in [Electron](http://electron.atom.io/) built apps.
 - **Currently, it supports the event sending function.**  
 
-### Features
-- Event
+### NPM
+[![npm version](https://badge.fury.io/js/electron-google-analytics4.svg)](https://www.npmjs.com/package/electron-google-analytics4)
 
 ### Github Page - Docs
 https://github.com/hajeonghun/electron-google-analytics4
+
+### Features
+- Event
 
 ### Getting started
 Installation
