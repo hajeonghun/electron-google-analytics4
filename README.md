@@ -40,6 +40,7 @@ yarn add electron-google-analytics4
 
 * Remove Single parameter (custom params)
 
+  `Analytics#set(key, null)`
     ```javascript
     analytics.set('user', null);
     ```
@@ -52,20 +53,23 @@ yarn add electron-google-analytics4
     analytics.setParams(params);
     ```
   
-* Initialization parameter (custom params)
+* Remove Multiple parameter (custom params)
 
+  `Analytics#setParams()`
     ```javascript
     analytics.setParams(); // customParams: {}
     ```
 
 * Set User Properties
 
+  `Analytics#setUserProperties(obj)`
     ```javascript
     analytics.setUserProperties({userId: 'ha', page_path: location.href});
     ```
   
 * Remove User Properties
 
+  `Analytics#setUserProperties()`
     ```javascript
     analytics.setUserProperties();
     ```
@@ -77,6 +81,14 @@ yarn add electron-google-analytics4
   analytics.event('page_view');
   // Return Promise
   ```
+
+### Notes
+`Method chaining is available.`
+```typescript
+analytics.set('name', 'jeonghun').set('age', 28);
+// or
+analytics.set('name', 'jeonghun').send('page_view');
+```
 
 ### Verification Steps
 ```
