@@ -24,7 +24,10 @@ yarn add electron-google-analytics4
 
   `Analytics(trackingID, secretKey, clientID?, sessionID?)`
   ```javascript
-  import Analytics from 'electron-google-analytics4';
+  import Analytics from 'electron-google-analytics4'; // esm
+  // or
+  const Analytics = require('electron-google-analytics4').default; // cjs
+  
   const analytics = new Analytics('G-XXXXXX', 'xxxxx-xxxxx');
   ```
   **Usage**  
