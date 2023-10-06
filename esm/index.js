@@ -1,55 +1,48 @@
-import {v4 as uuidv4} from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
-
 class Analytics4 {
-    private trackingID: string;
-    private secretKey: string;
-    private clientID: string;
-    private sessionID: string;
-    private customParams: Record<string, unknown> = {};
-    private userProperties: Record<string, unknown> | null = null;
-
-    private baseURL = 'https://google-analytics.com/mp';
-    private collectURL = '/collect';
-
-    constructor(trackingID: string, secretKey: string, clientID: string = uuidv4(), sessionID = uuidv4()) {
+    trackingID;
+    secretKey;
+    clientID;
+    sessionID;
+    customParams = {};
+    userProperties = null;
+    baseURL = 'https://google-analytics.com/mp';
+    collectURL = '/collect';
+    constructor(trackingID, secretKey, clientID = uuidv4(), sessionID = uuidv4()) {
         this.trackingID = trackingID;
         this.secretKey = secretKey;
         this.clientID = clientID;
         this.sessionID = sessionID;
     }
-
-    set(key: string, value: any) {
+    set(key, value) {
         if (value !== null) {
             this.customParams[key] = value;
-        } else {
+        }
+        else {
             delete this.customParams[key];
         }
-
         return this;
     }
-
-    setParams(params?: Record<string, unknown>) {
+    setParams(params) {
         if (typeof params === 'object' && Object.keys(params).length > 0) {
-            Object.assign(this.customParams, params)
-        } else {
+            Object.assign(this.customParams, params);
+        }
+        else {
             this.customParams = {};
         }
-
         return this;
     }
-
-    setUserProperties(upValue?: Record<string, unknown>) {
+    setUserProperties(upValue) {
         if (typeof upValue === 'object' && Object.keys(upValue).length > 0) {
             this.userProperties = upValue;
-        } else {
+        }
+        else {
             this.userProperties = null;
         }
-
         return this;
     }
-
-    event(eventName: string): Promise<any> {
+    event(eventName) {
         const payload = {
             client_id: this.clientID,
             events: [
@@ -62,17 +55,12 @@ class Analytics4 {
                 },
             ],
         };
-
-        if(this.userProperties) {
-            Object.assign(payload, {user_properties: this.userProperties})
+        if (this.userProperties) {
+            Object.assign(payload, { user_properties: this.userProperties });
         }
-
         return axios
-            .post(
-                `${this.baseURL}${this.collectURL}?measurement_id=${this.trackingID}&api_secret=${this.secretKey}`,
-                payload,
-            )
-    };
+            .post(`${this.baseURL}${this.collectURL}?measurement_id=${this.trackingID}&api_secret=${this.secretKey}`, payload);
+    }
+    ;
 }
-
 export default Analytics4;

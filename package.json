@@ -1,11 +1,18 @@
 {
   "name": "electron-google-analytics4",
   "description": "Electron GA4",
-  "version": "1.1.1",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "version": "1.2.0",
+  "main": "./cjs/index.js",
+  "module": "./esm/index.js",
+  "exports": {
+    ".": {
+      "import": "./esm/index.js",
+      "require": "./cjs/index.js"
+    }
+  },
   "files": [
-    "lib"
+    "cjs",
+    "esm"
   ],
   "license": "MIT",
   "author": "Ha Jeong Hun <hajh1994@gmail.com>",
@@ -22,7 +29,9 @@
     "electron ga4"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "npm run build:cjs & npm run build:esm",
+    "build:cjs": "tsc --p ./cjs/tsconfig.json",
+    "build:esm": "tsc --p ./esm/tsconfig.json",
     "test": "jest"
   },
   "devDependencies": {
@@ -39,7 +48,6 @@
   "dependencies": {
     "axios": "^1.4.0",
     "core-js": "^3.31.0",
-    "node-machine-id": "^1.1.12",
     "uuid": "^9.0.0"
   }
 }

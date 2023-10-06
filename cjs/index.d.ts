@@ -8,9 +8,9 @@ declare class Analytics4 {
     private baseURL;
     private collectURL;
     constructor(trackingID: string, secretKey: string, clientID?: string, sessionID?: string);
-    set(key: string, value: any): void;
-    setParams(params?: Record<string, unknown>): void;
-    setUserProperties(upValue?: Record<string, unknown>): void;
+    set(key: string, value: any): this;
+    setParams(params?: Record<string, unknown>): this;
+    setUserProperties(upValue?: Record<string, unknown>): this;
     event(eventName: string): Promise<any>;
 }
 export default Analytics4;
