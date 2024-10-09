@@ -79,6 +79,20 @@ yarn add electron-google-analytics4
     ```javascript
     analytics.setUserProperties();
     ```
+    
+* Set User Data
+
+  `Analytics#setUserData(obj)`
+    ```javascript
+    analytics.setUserData({sha256_email_address: '<yourEmailSha256Variable>', address: {country: 'US'}});
+    ```
+  
+* Remove User Data
+
+  `Analytics#setUserData()`
+    ```javascript
+    analytics.setUserData();
+    ```
 
 * Send Event
 
