@@ -8,6 +8,7 @@ class Analytics4 {
     private sessionID: string;
     private customParams: Record<string, unknown> = {};
     private userProperties: Record<string, unknown> | null = null;
+    private userData: Record<string, unknown> | null = null;
 
     private baseURL = 'https://google-analytics.com/mp';
     private collectURL = '/collect';
@@ -49,6 +50,16 @@ class Analytics4 {
         return this;
     }
 
+    setUserData(upValue?: Record<string, unknown>) {
+        if (typeof upValue === 'object' && Object.keys(upValue).length > 0) {
+            this.userData = upValue;
+        } else {
+            this.userData = null;
+        }
+
+        return this;
+    }
+
     event(eventName: string): Promise<any> {
         const payload = {
             client_id: this.clientID,
@@ -65,6 +76,10 @@ class Analytics4 {
 
         if(this.userProperties) {
             Object.assign(payload, {user_properties: this.userProperties})
+        }
+        
+        if(this.userData) {
+            Object.assign(payload, {user_data: this.userData})
         }
 
         return axios
