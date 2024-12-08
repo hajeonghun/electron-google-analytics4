@@ -31,7 +31,7 @@ yarn add electron-google-analytics4
   const analytics = new Analytics('G-XXXXXX', 'xxxxx-xxxxx');
   ```
   **Usage**  
-  To use the Analytics module, create a new instance of the Analytics class by providing the required parameters: `trackingID` and `secretKey`. ([secretKey Issuance Guide](https://www.monsterinsights.com/docs/how-to-create-your-measurement-protocol-api-secret-in-ga4/))  
+  To use the Analytics module, create a new instance of the Analytics class by providing the required parameters: `trackingID` and `secretKey`. ([SecretKey Issuance Guide](#secretkey-issuance-guide))  
   The `clientID` and `sessionID` parameters are optional and can be omitted if not needed.   
   `clientID default: ` machineId (node-machine-id)  
   `sessionID default: ` uuidv4 (uuid v4)  
@@ -95,6 +95,27 @@ analytics.set('name', 'jeonghun').set('age', 28);
 // or
 analytics.set('name', 'jeonghun').event('page_view');
 ```
+
+### SecretKey Issuance Guide
+#### Step 1. 
+Go to [analytics.google.com](http://analytics.google.com/). click Admin, and then select Data Streams from the available options.  
+
+![image](https://github.com/user-attachments/assets/1ee5b49f-ebb4-4a3d-a953-b8fcfed8834a)
+
+#### Step 2.
+Click on Data Streams and select your specific data stream.  
+
+![image](https://github.com/user-attachments/assets/087dd6d0-300d-4097-86d2-c23efd097ebd)
+
+#### Step 3.
+Under the Events section, click on Measurement Protocol API Secrets.  
+
+![image](https://github.com/user-attachments/assets/6adbc630-4698-4534-8699-bb9d458ca6cc)
+
+#### Step 4.
+Click the Create button to generate a new API secret and assign it a nickname.  
+
+![image](https://github.com/user-attachments/assets/a828a5cc-b38f-4b72-8099-f44107d4d47e)
 
 ### Verification Steps
 ```
